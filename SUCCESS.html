@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success Learning Center</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Spinner Overlay */
+    #spinnerOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #4d7c8a;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Spinner -->
+  <div id="spinnerOverlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Iframe -->
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbxclUOCDezn9Oa8qn3Q2Ebao13AjAiZiPss0LDtOa62NCMneqhwZtDmrqE4b7FQ-YlnaQ/exec" 
+    onload="document.getElementById('spinnerOverlay').style.display='none';">
+  </iframe>
+</body>
+</html>
